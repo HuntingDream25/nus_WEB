@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NUS 导航页</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container sections-container" id="sectionsContainer">
+        <div class="header">
+            <h1 class="title">NUS 导航页</h1>
+            <div class="search-container">
+                <input type="text" class="search-box" placeholder="搜索网站..." id="searchBox">
+            </div>
+        </div>
+
+        <div class="section favorites-section" data-section id="favoritesSection" data-section-id="favorites">
+            <div class="section-header">
+                <h2 class="section-title">我的收藏</h2>
+                <div class="section-controls">
+                    <label style="color:#fff; font-size:12px;">列数</label>
+                    <input class="cols-input" type="number" min="1" max="6" value="4" data-cols-input>
+                </div>
+            </div>
+            <div class="nav-grid" id="favoritesGrid"></div>
+            <div class="favorites-empty" id="favoritesEmpty" style="display:none;">收藏一些常用网站，会显示在这里</div>
+        </div>
+
+        <div class="section" data-section data-section-id="prep">
+            <div class="section-header">
+                <h2 class="section-title">入学前准备</h2>
+                <div class="section-controls">
+                    <label style="color:#fff; font-size:12px;">列数</label>
+                    <input class="cols-input" type="number" min="1" max="6" value="4" data-cols-input>
+                </div>
+            </div>
+            <div class="nav-grid">
+                <a href="https://osa.nus.edu.sg/accommodation/hostel-application/application-guide-graduate/" class="nav-item" data-name="宿舍申请时间 宿舍介绍">
+                    <div class="nav-icon"><img alt="favicon"></div>
+                    <div class="nav-title">宿舍申请时间 & 宿舍介绍</div>
+                    <div class="nav-description">研究生宿舍申请与介绍</div>
+                    <button type="button" class="fav-btn" aria-label="收藏"><span class="fav-icon">★</span></button>
+                </a>
+
+                <a href="https://uhms.nus.edu.sg/StudentPortal" class="nav-item" data-name="宿舍申请 申请官网">
+                    <div class="nav-icon"><img alt="favicon"></div>
+                    <div class="nav-title">宿舍申请官网</div>
+                    <div class="nav-description">学生宿舍门户</div>
+                    <button type="button" class="fav-btn" aria-label="收藏"><span class="fav-icon">★</span></button>
+                </a>
+
+                <a href="https://www.nus.edu.sg/registrar/academic-activities/registration/academic-related-matters/det" class="nav-item" data-name="DET 入学英语考试">
+                    <div class="nav-icon"><img alt="favicon"></div>
+                    <div class="nav-title">DET（入学英语考试）</div>
+                    <div class="nav-description">部分专业要求</div>
+                    <button type="button" class="fav-btn" aria-label="收藏"><span class="fav-icon">★</span></button>
+                </a>
+
+                <a href="https://www.nus.edu.sg/uhc/clinical-services/medical-examination/student-pre-admission-medical-examination" class="nav-item" data-name="体检 入学体检">
+                    <div class="nav-icon"><img alt="favicon"></div>
+                    <div class="nav-title">入学体检</div>
+                    <div class="nav-description">UHC 学生入学体检</div>
+                    <button type="button" class="fav-btn" aria-label="收藏"><span class="fav-icon">★</span></button>
+                </a>
+
+                <a href="https://eservices.ica.gov.sg/solar/index.xhtml" class="nav-item" data-name="IPA 申请官网 SOLAR">
+                    <div class="nav-icon"><img alt="favicon"></div>
+                    <div class="nav-title">IPA 申请官网（SOLAR）</div>
+                    <div class="nav-description">ICA 学生准证申请</div>
+                    <button type="button" class="fav-btn" aria-label="收藏"><span class="fav-icon">★</span></button>
+                </a>
+
+                <a href="https://exchange.nus.edu.sg/owa/auth/logon.aspx?url=https%3a%2f%2fexchange.nus.edu.sg%2fowa%2f&reason=0" class="nav-item" data-name="NUS 邮箱 第一次登录">
+                    <div class="nav-icon"><img alt="favicon"></div>
+                    <div class="nav-title">NUS 邮箱（首次登录）</div>
+                    <div class="nav-description">Exchange 登录入口</div>
+                    <button type="button" class="fav-btn" aria-label="收藏"><span class="fav-icon">★</span></button>
+                </a>
+            </div>
+        </div>
+
+        <div class="section" data-section data-section-id="systems">
+            <div class="section-header">
+                <h2 class="section-title">学校系统</h2>
+                <div class="section-controls">
+                    <label style="color:#fff; font-size:12px;">列数</label>
+                    <input class="cols-input" type="number" min="1" max="6" value="4" data-cols-input>
+                </div>
+            </div>
+            <div class="nav-grid">
+                <a href="https://nus.atlassian.net/wiki/spaces/canvasstudent/overview" class="nav-item" data-name="Canvas 指导 文档">
+                    <div class="nav-icon"><img alt="favicon"></div>
+                    <div class="nav-title">Canvas 指导</div>
+                    <div class="nav-description">官方学生指南</div>
+                    <button type="button" class="fav-btn" aria-label="收藏"><span class="fav-icon">★</span></button>
+                </a>
+
+                <a href="https://www.nus.edu.sg/canvas/login/" class="nav-item" data-name="Canvas 登录 学习管理系统 LMS">
+                    <div class="nav-icon"><img alt="favicon"></div>
+                <div class="nav-title">Canvas</div>
+                <div class="nav-description">学习管理系统</div>
+                    <button type="button" class="fav-btn" aria-label="收藏"><span class="fav-icon">★</span></button>
+            </a>
+            
+                <a href="https://mcprint.asia:9192/app;jsessionid=node01efmivry2zfbo1x7aglcj3t61u24803.node0?service=page/Home" 
+                class="nav-item" data-name="MCPrint 打印机">
+                <div class="nav-icon"><img alt="favicon"></div>
+                <div class="nav-title">MCPrint 打印机</div>
+                <div class="nav-description">学校打印服务入口</div>
+                <button type="button" class="fav-btn" aria-label="收藏"><span class="fav-icon">★</span></button>
+            </a>
+         
+                <a href="https://myedurec.nus.edu.sg/psp/cs90prd/?cmd=login&languageCd=ENG&" class="nav-item" data-name="EduRec 学生记录 系统">
+                    <div class="nav-icon"><img alt="favicon"></div>
+                <div class="nav-title">EduRec</div>
+                <div class="nav-description">学生记录系统</div>
+                    <button type="button" class="fav-btn" aria-label="收藏"><span class="fav-icon">★</span></button>
+                </a>
+            </div>
+
+            <div class="group-title">选课</div>
+            <div class="nav-grid">
+                <a href="https://nusmods.com/modules" class="nav-item" data-name="NusMods 模块 课程">
+                    <div class="nav-icon"><img alt="favicon"></div>
+                    <div class="nav-title">NusMods</div>
+                    <div class="nav-description">课程模块查询</div>
+                    <button type="button" class="fav-btn" aria-label="收藏"><span class="fav-icon">★</span></button>
+                </a>
+
+                <a href="https://nus.edu.sg/coursereg/schedule-and-timeline.html" class="nav-item" data-name="选课 时间 时间表">
+                    <div class="nav-icon"><img alt="favicon"></div>
+                    <div class="nav-title">选课时间安排</div>
+                    <div class="nav-description">CourseReg 时间线</div>
+                    <button type="button" class="fav-btn" aria-label="收藏"><span class="fav-icon">★</span></button>
+                </a>
+
+                <a href="https://nus.edu.sg/coursereg/resources.html" class="nav-item" data-name="选课 vacancy 资源">
+                    <div class="nav-icon"><img alt="favicon"></div>
+                    <div class="nav-title">选课 vacancy</div>
+                    <div class="nav-description">CourseReg 资源与名额</div>
+                    <button type="button" class="fav-btn" aria-label="收藏"><span class="fav-icon">★</span></button>
+                </a>
+            </div>
+        </div>
+
+        <div class="section" data-section data-section-id="career">
+            <div class="section-header">
+                <h2 class="section-title">就业找工作</h2>
+                <div class="section-controls">
+                    <label style="color:#fff; font-size:12px;">列数</label>
+                    <input class="cols-input" type="number" min="1" max="6" value="4" data-cols-input>
+                </div>
+            </div>
+            <div class="nav-grid">
+                <a href="https://inetapps.nus.edu.sg/nsws/app/login" class="nav-item" data-name="校内 勤工俭学 兼职">
+                    <div class="nav-icon"><img alt="favicon"></div>
+                    <div class="nav-title">校内勤工俭学</div>
+                    <div class="nav-description">NSWS 校园岗位</div>
+                    <button type="button" class="fav-btn" aria-label="收藏"><span class="fav-icon">★</span></button>
+                </a>
+
+                <a href="https://nus.edu.sg/cfg/" class="nav-item" data-name="就业 指导 Career CFG">
+                    <div class="nav-icon"><img alt="favicon"></div>
+                    <div class="nav-title">就业指导（CFG）</div>
+                    <div class="nav-description">职业发展与求职资源</div>
+                    <button type="button" class="fav-btn" aria-label="收藏"><span class="fav-icon">★</span></button>
+                </a>
+
+                <a href="https://nus-csm.symplicity.com/students/?uri=%2Fstudents%2Fapp%2Fjobs%2Fdiscover&signin_tab=0" class="nav-item" data-name="Talent connect 实习 NUS 实习僧 Symplicity">
+                    <div class="nav-icon"><img alt="favicon"></div>
+                    <div class="nav-title">Talent Connect（NUS 实习僧）</div>
+                    <div class="nav-description">校招与实习平台</div>
+                    <button type="button" class="fav-btn" aria-label="收藏"><span class="fav-icon">★</span></button>
+                </a>
+            </div>
+        </div>
+
+        <div class="section" data-section data-section-id="life">
+            <div class="section-header">
+                <h2 class="section-title">校园生活</h2>
+                <div class="section-controls">
+                    <label style="color:#fff; font-size:12px;">列数</label>
+                    <input class="cols-input" type="number" min="1" max="6" value="4" data-cols-input>
+                </div>
+            </div>
+            <div class="nav-grid">
+                <a href="https://nusit.nus.edu.sg/services/collaboration-and-productivity/nusmail/friendlymail/" class="nav-item" data-name="Friendlymail 邮箱 别名 昵称 显示名称">
+                    <div class="nav-icon"><img alt="favicon"></div>
+                    <div class="nav-title">Friendlymail（修改邮箱名称）</div>
+                    <div class="nav-description">NUSMail 显示名称</div>
+                    <button type="button" class="fav-btn" aria-label="收藏"><span class="fav-icon">★</span></button>
+                </a>
+
+                <a href="https://outlook.office.com/mail/inbox/id/AAQkAGQwMDM4NTM1LTcwYmEtNDFiNC1hZGE2LWVlNTZhZDA4ZDNmYwAQADieis8SzE0ysxpCNEJHg7g%3D?hl=zh_CN" class="nav-item" data-name="Outlook 邮箱 NUS 邮箱 OWA">
+                    <div class="nav-icon"><img alt="favicon"></div>
+                    <div class="nav-title">NUS 邮箱（Outlook）</div>
+                    <div class="nav-description">Outlook Web Access</div>
+                    <button type="button" class="fav-btn" aria-label="收藏"><span class="fav-icon">★</span></button>
+                </a>
+
+                <a href="https://nus.edu.sg/nuslibraries" class="nav-item" data-name="图书馆 Library 资源 馆藏">
+                    <div class="nav-icon"><img alt="favicon"></div>
+                    <div class="nav-title">图书馆</div>
+                    <div class="nav-description">NUS Libraries 门户</div>
+                    <button type="button" class="fav-btn" aria-label="收藏"><span class="fav-icon">★</span></button>
+                </a>
+
+                <a href="https://linc.nus.edu.sg/pinreset~S16" class="nav-item" data-name="重置 pin 密码 卡">
+                    <div class="nav-icon"><img alt="favicon"></div>
+                    <div class="nav-title">重置 PIN</div>
+                    <div class="nav-description">LINC PIN 重置</div>
+                    <button type="button" class="fav-btn" aria-label="收藏"><span class="fav-icon">★</span></button>
+                </a>
+
+                <a href="https://map.nus.edu.sg/" class="nav-item" data-name="地图 map 校园 导航 位置">
+                    <div class="nav-icon"><img alt="favicon"></div>
+                    <div class="nav-title">校园地图</div>
+                    <div class="nav-description">NUS Map</div>
+                    <button type="button" class="fav-btn" aria-label="收藏"><span class="fav-icon">★</span></button>
+                </a>
+
+                <a href="https://osa.nus.edu.sg/services-support/administrative-services/lost-and-found/" class="nav-item" data-name="Lost and Found 失物招领">
+                    <div class="nav-icon"><img alt="favicon"></div>
+                    <div class="nav-title">Lost and Found</div>
+                    <div class="nav-description">失物招领</div>
+                    <button type="button" class="fav-btn" aria-label="收藏"><span class="fav-icon">★</span></button>
+                </a>
+
+                <a href="https://osa.nus.edu.sg/services-support/administrative-services/student-card-replacement/" class="nav-item" data-name="学生卡 丢失 补办 Replacement">
+                    <div class="nav-icon"><img alt="favicon"></div>
+                    <div class="nav-title">丢失学生卡</div>
+                    <div class="nav-description">Student Card Replacement</div>
+                    <button type="button" class="fav-btn" aria-label="收藏"><span class="fav-icon">★</span></button>
+                </a>
+
+                <a href="https://nusit.nus.edu.sg/services/wifi_internet/nvpn/" class="nav-item" data-name="vpn 学校 内网 连接 访问">
+                    <div class="nav-icon"><img alt="favicon"></div>
+                    <div class="nav-title">校园 VPN（NVPN）</div>
+                    <div class="nav-description">校内资源访问</div>
+                    <button type="button" class="fav-btn" aria-label="收藏"><span class="fav-icon">★</span></button>
+                </a>
+
+                <a href="https://www.nuscoop.sg/nus-memorabilia/nus-apparel/nus-jackets" class="nav-item" data-name="coop 纪念品 服饰 校园 商店 书店">
+                    <div class="nav-icon"><img alt="favicon"></div>
+                    <div class="nav-title">Co-op（纪念品店）</div>
+                    <div class="nav-description">NUS Memorabilia</div>
+                    <button type="button" class="fav-btn" aria-label="收藏"><span class="fav-icon">★</span></button>
+                </a>
+
+                <a href="https://uci.nus.edu.sg/campus-life/campus-services/utown/facilities-booking-utown-non-residential-facilities/" class="nav-item" data-name="Utown 研讨室 舞蹈房 预约 预定 Facilities Booking">
+                    <div class="nav-icon"><img alt="favicon"></div>
+                    <div class="nav-title">Utown 研讨室/舞蹈房预约</div>
+                    <div class="nav-description">非住宿设施预定</div>
+                    <button type="button" class="fav-btn" aria-label="收藏"><span class="fav-icon">★</span></button>
+                </a>
+
+                <a href="https://aces.nus.edu.sg/fbs/" class="nav-item" data-name="图书馆 研讨室 预约 预定 FBS">
+                    <div class="nav-icon"><img alt="favicon"></div>
+                    <div class="nav-title">图书馆研讨室预约</div>
+                    <div class="nav-description">FBS 预约系统</div>
+                    <button type="button" class="fav-btn" aria-label="收藏"><span class="fav-icon">★</span></button>
+                </a>
+
+                <a href="https://reboks.nus.edu.sg/nus_public_web/public/facilities" class="nav-item" data-name="体育馆 体育 设施 预约 预定 ReBOKS">
+                    <div class="nav-icon"><img alt="favicon"></div>
+                    <div class="nav-title">体育馆预订</div>
+                    <div class="nav-description">ReBOKS 设施预约</div>
+                    <button type="button" class="fav-btn" aria-label="收藏"><span class="fav-icon">★</span></button>
+                </a>
+
+                <a href="https://nusit.nus.edu.sg/services/software_and_os/software/software-for-student/" class="nav-item" data-name="软件 软件许可 学生 软件资源 下载">
+                    <div class="nav-icon"><img alt="favicon"></div>
+                    <div class="nav-title">学校提供软件</div>
+                    <div class="nav-description">学生可用软件</div>
+                    <button type="button" class="fav-btn" aria-label="收藏"><span class="fav-icon">★</span></button>
+                </a>
+            </div>
+
+            <div class="group-title">Wifi</div>
+            <div class="nav-grid">
+                <a href="https://nusit.nus.edu.sg/eguides/" class="nav-item" data-name="eGuides 网络 指南 教程 Wifi">
+                    <div class="nav-icon"><img alt="favicon"></div>
+                    <div class="nav-title">eGuides（网络）</div>
+                    <div class="nav-description">NUSIT 网络指南</div>
+                    <button type="button" class="fav-btn" aria-label="收藏"><span class="fav-icon">★</span></button>
+                </a>
+
+                <a href="https://nusit.nus.edu.sg/services/wifi_internet/eduroam/" class="nav-item" data-name="eduroam 毕业 校友 Wifi 访问">
+                    <div class="nav-icon"><img alt="favicon"></div>
+                    <div class="nav-title">eduroam（毕业）</div>
+                    <div class="nav-description">Wi-Fi 访指南</div>
+                    <button type="button" class="fav-btn" aria-label="收藏"><span class="fav-icon">★</span></button>
+                </a>
+
+                <a href="https://libfaq.nus.edu.sg/faq?gid=71&qid=71366" class="nav-item" data-name="联网 说明 Library FAQ Wifi 连接">
+                    <div class="nav-icon"><img alt="favicon"></div>
+                    <div class="nav-title">联网说明</div>
+                    <div class="nav-description">Library FAQ</div>
+                    <button type="button" class="fav-btn" aria-label="收藏"><span class="fav-icon">★</span></button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" data-section id="feedback">
+        <div class="section-header">
+            <h2 class="section-title">反馈</h2>
+        </div>
+        <div class="feedback">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSezv1Lq1R4HCRQc1IYL51oquQL_O3a6UEXOq6hibne2OM-tJQ/viewform?embedded=true" width="100%" height="640" frameborder="0" marginheight="0" marginwidth="0">正在加载…</iframe>
+        </div>
+    </div>
+
+    <a class="floating-guide" href="https://mp.weixin.qq.com/s/q4GOlc3krcHm4wltc1f1_A" target="_blank" rel="noopener noreferrer">网页导览</a>
+    <button class="edit-toggle" id="editToggle">编辑布局</button>
+    <button class="login-helper-btn" id="loginHelperBtn">登录助手</button>
+    <a class="feedback-float-left" href="https://docs.google.com/forms/d/e/1FAIpQLSezv1Lq1R4HCRQc1IYL51oquQL_O3a6UEXOq6hibne2OM-tJQ/viewform?embedded=true" target="_blank" rel="noopener noreferrer">反馈问卷</a>
+
+    <div class="modal-backdrop" id="loginHelperModal">
+        <div class="modal">
+            <h3>登录助手（本地存储，受密码短语保护）</h3>
+            <div class="form-row">
+                <label for="nusId">NUS ID（如 eXXXXXXX）</label>
+                <input id="nusId" type="text" autocomplete="username" placeholder="输入你的学号/用户名">
+            </div>
+            <div class="form-row">
+                <label for="passphrase">密码短语（用于本地加密解密）</label>
+                <input id="passphrase" type="password" placeholder="仅在本机使用，避免遗忘">
+            </div>
+            <div class="form-row">
+                <label for="nusPwd">NUS 密码（可选，保存前会本地加密）</label>
+                <input id="nusPwd" type="password" autocomplete="current-password" placeholder="输入密码以更新保存（可留空）">
+            </div>
+            <div class="form-actions">
+                <button class="btn btn-primary" id="saveCreds">保存/更新</button>
+                <button class="btn btn-secondary" id="copyUser">复制用户名</button>
+                <button class="btn btn-secondary" id="copyPwd">复制密码</button>
+                <button class="btn" id="closeModal">关闭</button>
+            </div>
+            <div class="tip">说明：
+                1) 所有数据仅存于你的浏览器本地，绝不上传。
+                2) 跨站点自动填表受浏览器安全限制，建议到各网站登录页后使用“复制”按钮或浏览器密码管理器粘贴。
+                3) 切勿分享学校账号密码给他人。
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
