@@ -3,13 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NUS 导航页</title>
+
+
+    <title>NUS 常用网址导航</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@700;900&family=ZCOOL+KuaiLe&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container sections-container" id="sectionsContainer">
         <div class="header">
-            <h1 class="title">NUS 导航页</h1>
+            <h1 class="title">NUS 常用网址导航</h1>
             <div class="search-container">
                 <input type="text" class="search-box" placeholder="搜索网站..." id="searchBox">
             </div>
@@ -118,8 +125,16 @@
                     <button type="button" class="fav-btn" aria-label="收藏"><span class="fav-icon">★</span></button>
                 </a>
             </div>
+        </div>
 
-            <div class="group-title">选课</div>
+        <div class="section" data-section data-section-id="coursereg">
+            <div class="section-header">
+                <h2 class="section-title">选课</h2>
+                <div class="section-controls">
+                    <label style="color:#fff; font-size:12px;">列数</label>
+                    <input class="cols-input" type="number" min="1" max="6" value="4" data-cols-input>
+                </div>
+            </div>
             <div class="nav-grid">
                 <a href="https://nusmods.com/modules" class="nav-item" data-name="NusMods 模块 课程">
                     <div class="nav-icon"><img alt="favicon"></div>
@@ -276,8 +291,16 @@
                     <button type="button" class="fav-btn" aria-label="收藏"><span class="fav-icon">★</span></button>
                 </a>
             </div>
+        </div>
 
-            <div class="group-title">Wifi</div>
+        <div class="section" data-section data-section-id="wifi">
+            <div class="section-header">
+                <h2 class="section-title">Wifi</h2>
+                <div class="section-controls">
+                    <label style="color:#fff; font-size:12px;">列数</label>
+                    <input class="cols-input" type="number" min="1" max="6" value="4" data-cols-input>
+                </div>
+            </div>
             <div class="nav-grid">
                 <a href="https://nusit.nus.edu.sg/eguides/" class="nav-item" data-name="eGuides 网络 指南 教程 Wifi">
                     <div class="nav-icon"><img alt="favicon"></div>
@@ -303,19 +326,26 @@
         </div>
     </div>
 
-    <div class="section" data-section id="feedback">
-        <div class="section-header">
-            <h2 class="section-title">反馈</h2>
-        </div>
-        <div class="feedback">
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSezv1Lq1R4HCRQc1IYL51oquQL_O3a6UEXOq6hibne2OM-tJQ/viewform?embedded=true" width="100%" height="640" frameborder="0" marginheight="0" marginwidth="0">正在加载…</iframe>
-        </div>
+    <a class="floating-btn" href="https://mp.weixin.qq.com/s/q4GOlc3krcHm4wltc1f1_A" target="_blank" rel="noopener noreferrer">
+        <i class="material-icons">explore</i>
+        <span>网页导览</span>
+    </a>
+    <button class="floating-btn" id="loginHelperBtn">
+        <i class="material-icons">lock</i>
+        <span>登录助手</span>
+    </button>
+    <button class="floating-btn" id="editToggle">
+        <i class="material-icons">edit</i>
+        <span>编辑布局</span>
+    </button>
+    <button class="floating-btn" id="tocToggle">
+        <i class="material-icons">menu</i>
+        <span>目录</span>
+    </button>
+    <div class="toc-panel" id="tocPanel">
+        <div class="toc-header">目录</div>
+        <div class="toc-list" id="tocList"></div>
     </div>
-
-    <a class="floating-guide" href="https://mp.weixin.qq.com/s/q4GOlc3krcHm4wltc1f1_A" target="_blank" rel="noopener noreferrer">网页导览</a>
-    <button class="edit-toggle" id="editToggle">编辑布局</button>
-    <button class="login-helper-btn" id="loginHelperBtn">登录助手</button>
-    <a class="feedback-float-left" href="https://docs.google.com/forms/d/e/1FAIpQLSezv1Lq1R4HCRQc1IYL51oquQL_O3a6UEXOq6hibne2OM-tJQ/viewform?embedded=true" target="_blank" rel="noopener noreferrer">反馈问卷</a>
 
     <div class="modal-backdrop" id="loginHelperModal">
         <div class="modal">
